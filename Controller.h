@@ -16,6 +16,7 @@
 	IBOutlet id enterButton;
 	IBOutlet id smsIndicator;
 	IBOutlet id smsWindow;
+	IBOutlet id smsSound;
 	
 	SMSTester *smsTester;
 	int mode;
@@ -29,5 +30,7 @@
 -(void)setFloatValues:(NSNotification *)notification;
 -(void)loopData;
 -(void)cleanDisplay;
+-(void)securityStuff;
+-(void)speekText:(NSString *)text;
 
 @end

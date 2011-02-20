@@ -38,16 +38,33 @@
 	[smsWindow setDelegate:self];
 }
 
+-(void)speekText:(NSString *)text{
+	
+	NSSpeechSynthesizer *syn = [[NSSpeechSynthesizer alloc] init];
+	NSString *voiceID = [[NSSpeechSynthesizer availableVoices] objectAtIndex:20];
+    [syn setVoice:voiceID];
+	
+	[syn startSpeakingString:text];
+	[syn release];
+	
+}
+
 // Start or stop calculating
 -(IBAction)pushEnter:(id)sender{
 	
 	if ([[enterButton title]isEqualToString:@"Stop"]) {
 		[enterButton setTitle:@"Start"];
 		self.mode = 0;
+		
+		[self speekText:@"stop sudden motion observer"];
+		
 		[self cleanDisplay];
 	}else if([[enterButton title]isEqualToString:@"Start"]){
 		[enterButton setTitle:@"Stop"];
 		self.mode = 1;
+		
+		[self speekText:@"start sudden motion observer"];
+		
 		[self performSelectorInBackground:@selector(loopData) withObject:nil];
 	}
 
@@ -86,11 +103,40 @@
 	 rmz
 	 */
 	// Try some calculations
-	resultMotion = ((xValue + yValue + zValue)*10);
-	NSLog(@"Result: %f",resultMotion);
+	self.resultMotion = ((xValue + yValue + zValue)*10);
+	//NSLog(@"Result: %f",resultMotion);
 	
 	// Set the result to the indicator
-	[smsIndicator setDoubleValue:resultMotion];
+	[smsIndicator setDoubleValue:self.resultMotion];
+	[self securityStuff];
+}
+
+-(void)securityStuff{
+	if ([smsSound state] == NSOnState ){ 
+		NSSound *warningSound = [NSSound soundNamed:@"SMSControllerSoundWarning"];
+		NSSound *alarmSound = [NSSound soundNamed:@"SMSControllerSoundAlarm"];
+		
+		if (self.resultMotion >= 2 && self.resultMotion <= 3) {
+			NSLog(@"Warning");
+			if ([warningSound isPlaying] == YES ||[alarmSound isPlaying] == YES) {
+			}else {
+				[self speekText:@"warning"];
+				[warningSound play];
+			}
+		}else if (self.resultMotion >= 3) {
+			NSLog(@"ALARM");
+			if ([warningSound isPlaying] == YES ||[alarmSound isPlaying] == YES) {
+			}else {
+				[self speekText:@"alarm!"];
+				[alarmSound play];
+			}
+		}
+		
+		[warningSound release];
+		[alarmSound release];
+	}
+
+	
 }
 
 // Make a loop to get the SMS data

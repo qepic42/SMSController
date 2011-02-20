@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		104652651311758500299548 /* SMSControllerSoundAlarm.aif in Resources */ = {isa = PBXBuildFile; fileRef = 104652631311758500299548 /* SMSControllerSoundAlarm.aif */; };
+		104652661311758500299548 /* SMSControllerSoundWarning.aif in Resources */ = {isa = PBXBuildFile; fileRef = 104652641311758500299548 /* SMSControllerSoundWarning.aif */; };
 		10647BF31311495700F66853 /* SMSTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 10647BEC1311495700F66853 /* SMSTester.m */; };
 		10647BF41311495700F66853 /* smslib.m in Sources */ = {isa = PBXBuildFile; fileRef = 10647BEE1311495700F66853 /* smslib.m */; };
 		10647BF51311495700F66853 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 10647BF01311495700F66853 /* Controller.m */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		104652631311758500299548 /* SMSControllerSoundAlarm.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SMSControllerSoundAlarm.aif; sourceTree = "<group>"; };
+		104652641311758500299548 /* SMSControllerSoundWarning.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SMSControllerSoundWarning.aif; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		10647BEB1311495700F66853 /* SMSTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSTester.h; sourceTree = "<group>"; };
 		10647BEC1311495700F66853 /* SMSTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSTester.m; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				104652631311758500299548 /* SMSControllerSoundAlarm.aif */,
+				104652641311758500299548 /* SMSControllerSoundWarning.aif */,
 				10647C9C131149C600F66853 /* MainMenu.xib */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* SMSController-Info.plist */,
@@ -186,6 +192,8 @@
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				10647C9D131149C600F66853 /* MainMenu.xib in Resources */,
+				104652651311758500299548 /* SMSControllerSoundAlarm.aif in Resources */,
+				104652661311758500299548 /* SMSControllerSoundWarning.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
