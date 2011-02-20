@@ -62,6 +62,8 @@
 	double zValue = [[[notification userInfo]objectForKey:@"zValue"]floatValue];
 	
 	// Make them positiv
+	xValue = (xValue - 0.1);
+	zValue = (zValue - 1.04);
 	xValue = sqrt(pow(xValue, 2));
 	yValue = sqrt(pow(yValue, 2));
 	zValue = sqrt(pow(zValue, 2));
@@ -70,16 +72,22 @@
 	[xField setStringValue:[NSString stringWithFormat:@"%f",xValue]];
 	[yField setStringValue:[NSString stringWithFormat:@"%f",yValue]];
 	[zField setStringValue:[NSString stringWithFormat:@"%f",zValue]];
-
+	
 	/*
-	NSLog(@"|X|:%f",xValue);
-	NSLog(@"|Y|:%f",yValue);
-	NSLog(@"|Z|:%f",zValue);
-	*/
-	 
+	 NSLog(@"|X|:%f",xValue);
+	 NSLog(@"|Y|:%f",yValue);
+	 NSLog(@"|Z|:%f",zValue);
+	 */
+	
+	//Values für resultMotion
+	/*
+	 rmx
+	 rmy
+	 rmz
+	 */
 	// Try some calculations
-	resultMotion = xValue + yValue + zValue;
-//	NSLog(@"Result: %f",resultMotion);
+	resultMotion = ((xValue + yValue + zValue)*10);
+	NSLog(@"Result: %f",resultMotion);
 	
 	// Set the result to the indicator
 	[smsIndicator setDoubleValue:resultMotion];

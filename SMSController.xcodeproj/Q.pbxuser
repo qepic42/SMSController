@@ -12,10 +12,20 @@
 		fRef = 10647BF01311495700F66853 /* Controller.m */;
 		name = "Controller.m: 85";
 		rLen = 43;
-		rLoc = 1987;
+		rLoc = 2103;
 		rType = 0;
 		vrLen = 1454;
 		vrLoc = 970;
+	};
+	1030E9DA13116F780061861B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10647BF01311495700F66853 /* Controller.m */;
+		name = "Controller.m: 93";
+		rLen = 0;
+		rLoc = 2146;
+		rType = 0;
+		vrLen = 1451;
+		vrLoc = 1067;
 	};
 	10647BDF1311493600F66853 /* SMSController */ = {
 		isa = PBXExecutable;
@@ -98,9 +108,9 @@
 	};
 	10647BF01311495700F66853 /* Controller.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 1443}}";
-			sepNavSelRange = "{1987, 43}";
-			sepNavVisRange = "{970, 1454}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 1521}}";
+			sepNavSelRange = "{2146, 0}";
+			sepNavVisRange = "{1067, 1451}";
 			sepNavWindowFrame = "{{38, 363}, {1049, 389}}";
 		};
 	};
@@ -235,7 +245,7 @@
 		fRef = 10647BF01311495700F66853 /* Controller.m */;
 		name = "Controller.m: 85";
 		rLen = 43;
-		rLoc = 1987;
+		rLoc = 2103;
 		rType = 0;
 		vrLen = 1454;
 		vrLoc = 970;
@@ -303,6 +313,7 @@
 		};
 		perUserProjectItems = {
 			1030E9C813116BD10061861B /* PBXTextBookmark */ = 1030E9C813116BD10061861B /* PBXTextBookmark */;
+			1030E9DA13116F780061861B /* PBXTextBookmark */ = 1030E9DA13116F780061861B /* PBXTextBookmark */;
 			10647CC813114B8000F66853 = 10647CC813114B8000F66853 /* PBXTextBookmark */;
 			10647CCD13114B8000F66853 = 10647CCD13114B8000F66853 /* PBXTextBookmark */;
 			10647CCF13114B8000F66853 = 10647CCF13114B8000F66853 /* PBXTextBookmark */;
