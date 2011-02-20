@@ -21,6 +21,8 @@
 		// 1: Stop-mode
 		self.mode = 0;
 		
+		[self motionLog:@"fail"];
+		
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(setFloatValues:)
 													 name:@"setValues"
@@ -56,7 +58,7 @@
 		[enterButton setTitle:@"Start"];
 		self.mode = 0;
 		
-		[self speekText:@"stop sudden motion observer"];
+	//	[self speekText:@"stop sudden motion observer"];
 		
 		[self cleanDisplay];
 	}else if([[enterButton title]isEqualToString:@"Start"]){
@@ -109,6 +111,7 @@
 	// Set the result to the indicator
 	[smsIndicator setDoubleValue:self.resultMotion];
 	[self securityStuff];
+	[self logMovement];
 }
 
 -(void)securityStuff{
@@ -117,32 +120,36 @@
 		NSSound *alarmSound = [NSSound soundNamed:@"SMSControllerSoundAlarm"];
 		
 		if (self.resultMotion >= 2 && self.resultMotion <= 3) {
-			NSLog(@"Warning");
+			//NSLog(@"Warning");
 			if ([warningSound isPlaying] == YES ||[alarmSound isPlaying] == YES) {
 			}else {
 				[self speekText:@"warning"];
 				[warningSound play];
 			}
 		}else if (self.resultMotion >= 3) {
-			NSLog(@"ALARM");
+			//NSLog(@"ALARM");
 			if ([warningSound isPlaying] == YES ||[alarmSound isPlaying] == YES) {
 			}else {
-				[self speekText:@"alarm!"];
+				[self speekText:@"alarm"];
 				[alarmSound play];
 			}
 		}
 		
-		[warningSound release];
-		[alarmSound release];
 	}
 
 	
 }
 
+-(void)logMovement{
+	if ([smsLog state] == NSOnState ){
+		[self motionLog:[NSString stringWithFormat:@"%@: %f",@"total movement",self.resultMotion]];
+	}
+}
+
 // Make a loop to get the SMS data
 -(void)loopData{
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	SMSTester *smsTester = [[SMSTester alloc]init];
+	SMSTester *smsTester = [[[SMSTester alloc]init]autorelease];
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
 	
 	while (self.mode == 1) {
@@ -151,6 +158,33 @@
 	}
 	
 	[pool release];
+}
+
+-(NSString *)logDate{
+	NSDate *now = [NSDate date];
+	return [NSString stringWithFormat:@"%@",now];
+}
+
+-(void)motionLog:(NSString *)text{
+	
+	NSString *homeDir = NSHomeDirectory();
+    NSString* fullPath = [homeDir stringByAppendingPathComponent:@"/Library/Logs/MovementSecurity	.log"];
+	
+	NSString *oldContent = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:nil];
+	
+	if (oldContent == nil) {
+		[[NSFileManager defaultManager] createFileAtPath:fullPath contents:nil attributes:nil];
+		NSLog(@"Logfile created");
+		NSString *new = [NSString stringWithFormat:@"%@: %@",[self logDate],text];
+		[new writeToFile:fullPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+	}else {
+		NSString *new = [NSString stringWithFormat:@"%@: %@",[self logDate],text];
+		
+		NSString *content = [NSString stringWithFormat:@"%@\n%@",oldContent,new];
+		
+		[content writeToFile:fullPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+	}
+	
 }
 
 // Clean display by pressing 'stop'

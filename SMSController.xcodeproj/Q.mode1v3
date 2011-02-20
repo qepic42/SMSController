@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1046531D13117D8D00299548</string>
+										<string>104654121311990600299548</string>
 										<key>history</key>
 										<array>
 											<string>10647CC813114B8000F66853</string>
@@ -343,8 +343,8 @@
 											<string>10647DA91311613400F66853</string>
 											<string>10647DAA1311613400F66853</string>
 											<string>10647DAB1311613400F66853</string>
-											<string>104652A313117B0200299548</string>
-											<string>104652A413117B0200299548</string>
+											<string>1046534B1311831200299548</string>
+											<string>104654041311987E00299548</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -542,13 +542,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1046531E13117D8D00299548</string>
 		<string>1046523C1311717F00299548</string>
 		<string>1046523D1311717F00299548</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>10647CA0131149F300F66853</string>
-		<string>/Users/Q/Sites/SMSController/SMSController.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/Q/Sites/SMSController/SMSController.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1280 719 0 0 1280 778 </string>
@@ -579,14 +578,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {500, 218}}</string>
+								<string>{{0, 0}, {642, 229}}</string>
 								<key>RubberWindowFrame</key>
-								<string>42 232 500 500 0 0 1280 778 </string>
+								<string>42 221 642 511 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>218pt</string>
+							<string>229pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -605,9 +604,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 223}, {500, 236}}</string>
+								<string>{{0, 234}, {642, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>42 232 500 500 0 0 1280 778 </string>
+								<string>42 221 642 511 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -616,7 +615,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>459pt</string>
+					<string>470pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -639,7 +638,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>42 232 500 500 0 0 1280 778 </string>
+			<string>42 221 642 511 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>10647CA0131149F300F66853</string>
 			<key>WindowToolIsVisible</key>

@@ -1451,13 +1451,35 @@
 								<reference key="NSControlView" ref="294134181"/>
 								<int key="NSButtonFlags">1211912703</int>
 								<int key="NSButtonFlags2">2</int>
-								<object class="NSCustomResource" key="NSNormalImage">
+								<object class="NSCustomResource" key="NSNormalImage" id="155116029">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">NSSwitch</string>
 								</object>
-								<object class="NSButtonImageSource" key="NSAlternateImage">
+								<object class="NSButtonImageSource" key="NSAlternateImage" id="941915782">
 									<string key="NSImageName">NSSwitch</string>
 								</object>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">200</int>
+								<int key="NSPeriodicInterval">25</int>
+							</object>
+						</object>
+						<object class="NSButton" id="737929427">
+							<reference key="NSNextResponder" ref="414427165"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{181, 115}, {63, 18}}</string>
+							<reference key="NSSuperview" ref="414427165"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="497156161">
+								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags2">0</int>
+								<string key="NSContents">Log</string>
+								<reference key="NSSupport" ref="440953476"/>
+								<reference key="NSControlView" ref="737929427"/>
+								<int key="NSButtonFlags">1211912703</int>
+								<int key="NSButtonFlags2">2</int>
+								<reference key="NSNormalImage" ref="155116029"/>
+								<reference key="NSAlternateImage" ref="941915782"/>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">200</int>
@@ -2190,6 +2212,14 @@
 					</object>
 					<int key="connectionID">857</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">smsLog</string>
+						<reference key="source" ref="901705781"/>
+						<reference key="destination" ref="737929427"/>
+					</object>
+					<int key="connectionID">860</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2504,6 +2534,7 @@
 							<reference ref="784707842"/>
 							<reference ref="504243484"/>
 							<reference ref="294134181"/>
+							<reference ref="737929427"/>
 						</object>
 						<reference key="parent" ref="513744381"/>
 					</object>
@@ -3347,6 +3378,20 @@
 						<reference key="object" ref="287990165"/>
 						<reference key="parent" ref="294134181"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">858</int>
+						<reference key="object" ref="737929427"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="497156161"/>
+						</object>
+						<reference key="parent" ref="414427165"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">859</int>
+						<reference key="object" ref="497156161"/>
+						<reference key="parent" ref="737929427"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -3581,7 +3626,11 @@
 					<string>846.IBPluginDependency</string>
 					<string>854.IBPluginDependency</string>
 					<string>855.IBPluginDependency</string>
+					<string>855.IBViewBoundsToFrameTransform</string>
 					<string>856.IBPluginDependency</string>
+					<string>858.IBPluginDependency</string>
+					<string>858.IBViewBoundsToFrameTransform</string>
+					<string>859.IBPluginDependency</string>
 					<string>92.IBPluginDependency</string>
 					<string>92.ImportedFromIB2</string>
 				</object>
@@ -3831,6 +3880,14 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDNQAAwxcAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDOgAAwxIAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -3852,7 +3909,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">857</int>
+			<int key="maxID">860</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3877,6 +3934,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>enterButton</string>
 							<string>smsIndicator</string>
+							<string>smsLog</string>
 							<string>smsSound</string>
 							<string>smsWindow</string>
 							<string>xField</string>
@@ -3885,6 +3943,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -3900,6 +3959,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>enterButton</string>
 							<string>smsIndicator</string>
+							<string>smsLog</string>
 							<string>smsSound</string>
 							<string>smsWindow</string>
 							<string>xField</string>
@@ -3914,6 +3974,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">smsIndicator</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">smsLog</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">

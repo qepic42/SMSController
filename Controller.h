@@ -17,6 +17,7 @@
 	IBOutlet id smsIndicator;
 	IBOutlet id smsWindow;
 	IBOutlet id smsSound;
+	IBOutlet id smsLog;
 	
 	SMSTester *smsTester;
 	int mode;
@@ -32,5 +33,8 @@
 -(void)cleanDisplay;
 -(void)securityStuff;
 -(void)speekText:(NSString *)text;
+-(NSString *)logDate;
+-(void)logMovement;
+-(void)motionLog:(NSString *)text;
 
 @end
